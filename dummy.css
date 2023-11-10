@@ -1,0 +1,91 @@
+#header-top-i {
+    padding-bottom: 390px;
+}
+
+#nixe-castle #header-top-i {
+    background: #EFF2F9 url(../img/contents/nixe-castle/main_image.jpg) no-repeat center top;
+}
+
+#ashika-ottosei #header-top-i {
+    background: #000 url(../img/contents/ashika-ottosei/main_image.jpg) no-repeat center top;
+}
+
+#iruka-performance #header-top-i,
+#surprize #header-top-i {
+    background: #EDFBFF url(../img/contents/iruka-show/main_image.jpg) no-repeat center top;
+}
+
+#rikuzokukan #header-top {
+    background: #F9F3E9 url(../img/contents/rikuzokukan/bg_main_image.gif) repeat-x left bottom;
+}
+
+#rikuzokukan #header-top-i {
+    background: url(../img/contents/rikuzokukan/main_image.jpg) no-repeat center top;
+}
+
+#nixe-land #header-top-i {
+    background: #fafafa url(../img/contents/nixe-land/main_image.jpg) no-repeat center top;
+}
+
+#nixe-hiroba #header-top-i {
+    padding-bottom: 0;
+}
+
+#restaurant-shop #header-top-i {
+    background: #EEE8E1 url(../img/contents/restaurant-shop/main_image.jpg) no-repeat center top;
+}
+
+#news #header-top-i {
+    padding-bottom: 290px;
+    background: #EFE8E1 url(../img/contents/news/main_image.jpg) no-repeat center top;
+}
+
+#guide #header-top-i {
+    padding-bottom: 290px;
+    background: #FDF5F1 url(../img/contents/guide/main_image.jpg) no-repeat center top;
+}
+
+#access #header-top-i {
+    padding-bottom: 290px;
+    background: #EEF7FF url(../img/contents/access/main_image.jpg) no-repeat center top;
+}
+
+#faq #header-top-i {
+    padding-bottom: 290px;
+    background: #F5F4F0 url(../img/contents/faq/main_image.jpg) no-repeat center top;
+}
+
+#about-us #header-top-i {
+    padding-bottom: 290px;
+    background: #ECF2FD url(../img/contents/about-us/main_image.jpg) no-repeat center top;
+}
+
+#education-travel-guide #header-top-i {
+    padding-bottom: 290px;
+    background: #FEF7EF url(../img/contents/education-travel-guide/main_image.jpg) no-repeat center top;
+}
+
+#toiawase #header-top-i {
+    padding-bottom: 290px;
+    background: #E7F3FF url(../img/contents/toiawase/main_image.jpg) no-repeat center top;
+}
+
+#oishii #header-top-i {
+    padding-bottom: 562px;
+    background: #FFF1A2 url(../img/contents/oishii/main_image.jpg) no-repeat center top;
+}
+
+#taiken-taikan #header-top-i {
+    padding-bottom: 386px;
+    background: url(../img/contents/taiken-taikan/main_image.jpg) no-repeat center top;
+}
+
+#baggage-service #header-top-i {
+    padding-bottom: 0;
+    background-color: #fff;
+}
+
+#free-shuttle #header-top-i {
+    padding-bottom: 0;
+    background-color: #fff;
+}
