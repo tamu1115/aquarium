@@ -25,11 +25,14 @@ h2,
 p,
 a
 li,
+th,
 td,
 dd
  {
     font-family: 'Yomogi', cursive;
 } */
+
+
 
 h2{
     margin: 20px;
@@ -76,7 +79,7 @@ main {
 }
 
 section{
-    margin: 0 auto;
+    margin: -20px auto;
     padding: 30px 10%;
 }
 
@@ -127,7 +130,6 @@ section h1{
 
 /* アクセス1 */
 #access1{
-    position: relative;
     width: 100%;
     padding:0;
     margin: 0;
@@ -142,7 +144,8 @@ height: 30vh;
 }
 
 .access1_content{
-    width: 80%;
+
+    padding: 30px 10%;
 }
 
 /* アクセス2 */
@@ -152,4 +155,18 @@ height: 30vh;
 .dummy_footer{
     width: 100%;
     clip-path: inset(50% 0 0 0);
+}
+
+.access-tb{
+    width: 70%;
+    text-align: center;
+
+}
+
+
+th,
+td,
+dd{
+font-size: 2rem;
+border: 2px solid #000;
 }
