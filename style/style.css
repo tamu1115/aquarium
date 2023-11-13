@@ -1,0 +1,508 @@
+/* 共通パーツ */
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Yomogi', cursive;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+/* 横スクロール禁止 */
+/* スクロールゆっくり */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* 余白用 */
+.span {
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+
+section {
+    padding: 0 10%;
+}
+
+
+/* ローディング */
+.loading {
+    width: 100%;
+    height: 100vh;
+    transition: all 2s;
+    background-color: skyblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading_text {
+    margin-left: 7%;
+    color: #FFFFFF;
+}
+
+.loading_text::after {
+    content: (".");
+    color: #004384;
+}
+
+/* ローディングクラゲ */
+
+.squid {
+    width: 100px;
+    height: 100px;
+    /* background-color: #72B8FF; */
+    border-radius: 50%;
+    transform: translateX(-100px);
+    animation: rotation 2s linear infinite;
+}
+
+.squid img {
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ヘッダーメニュー */
+.head_box::before {
+    content: "";
+}
+
+.head_box {
+    /* display: none; */
+    position: fixed;
+    top: 30;
+    left: 0;
+    z-index: 999;
+    height: auto;
+    width: 100%;
+    background-image: radial-gradient(circle, #72B8FF, #ffffff 180%);
+    transform: translateX(100%);
+    transition: 1s;
+
+}
+
+.head_box_active {
+    /* display: block; */
+    transform: translateX(0);
+
+}
+
+/* ヘッダーコンテンツ１ */
+.head_flex_box {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.head_flex_box li {
+    height: 100%;
+    text-align: center;
+    font-size: 2%;
+}
+
+.head_box_list {
+    height: 100%;
+    border: 1px solid #FFFFFF;
+    background-size: cover;
+}
+
+.head_box_list:hover {
+    background: linear-gradient(60deg, #aed6ff, #ccdfff);
+}
+
+.head_box_list img {
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.head_box_list p {
+    font-size: 0.8rem;
+    height: 20%;
+}
+
+/* ヘッダーコンテンツ２ */
+.head_flex_box2 {
+    background-image: radial-gradient(circle, #004384, #ffffff 180%);
+    justify-content: center;
+    align-items: center;
+}
+
+.head_flex_box2 li a {
+    margin-left: 30%;
+    color: white;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+@media(min-width: 430px) {
+
+    /* ここに430px以上の画面幅で適用したいスタイルを書く */
+    /* ヘッダーメニュー */
+    .head_box {
+        height: auto;
+
+        width: 100%;
+        background-image: radial-gradient(circle, #72B8FF, #ffffff 180%);
+        transform: translateX(0%);
+        position: relative;
+    }
+
+    /*ヘッダーが上に張り付く */
+    .is-sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* ヘッダーコンテンツ１ */
+    .head_flex_box {
+        height: auto;
+        max-height: 100px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .head_flex_box li {
+        height: 100%;
+        text-align: center;
+        font-size: 6.25%;
+    }
+
+    .head_box_list {
+        height: 100%;
+        border: 1px solid #FFFFFF;
+        background-size: cover;
+    }
+
+    .head_box_list:hover {
+        background: linear-gradient(60deg, #aed6ff, #ccdfff);
+    }
+
+    .head_box_list img {
+        max-height: 100px;
+        width: 50%;
+        height: 80%;
+    }
+
+    .head_box_list p {
+        font-size: 0.8rem;
+        height: 20%;
+    }
+
+
+    /* ヘッダーコンテンツ２ */
+    .head_flex_box2 {
+        background-image: radial-gradient(circle, #004384, #ffffff 180%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head_flex_box2 li a {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        line-height: normal;
+    }
+
+    .head_flex_box2 li::before {
+        content: "｜ ";
+        color: white;
+    }
+
+    .head_flex_box2 :first-child::before {
+        content: "";
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+
+/* video */
+.video_fish {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.video_fish video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video_fish h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    rotate: 10deg;
+    color: white;
+
+}
+
+
+
+/* ------ハンバーガーメニュー------ */
+.openbtn {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    background-color: #8c9299;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 999;
+}
+
+.openbtn:hover {
+    border-radius: 50%;
+    animation-name: menupoint;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes menupoint {
+    10% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* 三本線設定 */
+.openbtn span {
+    background-color: #fff8ec;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s;
+}
+
+.topver span:nth-child(1) {
+    top: 18px;
+}
+
+.topver span:nth-child(2) {
+    top: 25px;
+}
+
+.topver span:nth-child(3) {
+    top: 32px;
+}
+
+/* ------メニュー押した後------ */
+
+.menu_active span:nth-child(1) {
+    width: 13px;
+    top: 37%;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+.menu_active span:nth-child(3) {
+    width: 13px;
+    top: 58%;
+    left: 50%;
+    transform: rotate(-45deg);
+}
+
+/* ----- mask ----- 領域外クリックでメニュー画面を閉じる */
+.mask {
+    display: none;
+}
+
+.mask_active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.349);
+    z-index: 999;
+}
+
+/* ------メニュー画面------ */
+
+nav h4 {
+    margin: 12px 0;
+    text-align: left;
+    width: fit-content;
+}
+
+nav {
+    position: fixed;
+    width: 35vw;
+    height: 100vh;
+    background-color: #72B8FF;
+    right: 0;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: all 0.7s;
+}
+
+/*  */
+
+.topics {
+    margin: 30px 0;
+}
+
+.topics_title,
+.news_title,
+.infomation_title {
+    display: inline-block;
+    border-bottom: solid 1px;
+    line-height: 2;
+    margin: 12px 0;
+    color: #72B8FF;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.news_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news_list_box {
+    background-color: #72B8FF;
+    margin: 0;
+    border: none;
+}
+
+.news_list_box h2 {
+    color: white;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+
+.section_title {
+    color: white;
+    z-index: 2;
+}
+
+
+
+/*==================================
+スライダーのためのcss
+===================================*/
+.topics_slider {
+    padding: 0;
+}
+
+.slider img {
+    /* margin-top: 100px; */
+    width: 100%;
+    /*スライダー内の画像を横幅100%に*/
+    height: auto;
+    animation: ease;
+    
+}
+
+.slider img:hover {
+    scale: 1.1;
+
+}
+
+
+.slider .slick-slide {
+    margin: 0 -10px;
+    /* / スライド左右の余白調整 */
+}
+
+.slider {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.infomation_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infomation_content {
+    cursor: pointer;
+
+    text-align: center;
+    width: 50%;
+    background-image: radial-gradient(circle, #004384, #ffffff 150%);
+}
+
+.infomation_content:nth-child(1),
+.infomation_content:nth-child(4),
+.infomation_content:nth-child(5) {
+    background-image: radial-gradient(circle, #72B8FF, #ffffff 150%);
+
+    color: white;
+}
+
+@media (min-width: 430px) {
+
+    /* ここに430px以上の画面幅で適用したいスタイルを書く */
+
+    .flex_section {
+        display: flex;
+    }
+}
+
+footer {
+    background-color: #004384;
+    color: white;
+    text-align: center;
+}
+/*  --------------------------------------    */
