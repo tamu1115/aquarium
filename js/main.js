@@ -1,7 +1,7 @@
 // window.loadで読み込みが終わった2秒後にclassAddクラス付与
 
 window.onload = () => {
-    setTimeout(lodingClear,2000)
+    setTimeout(lodingClear, 1000)
     // const snipper = document.getElementById('loading');
     // snipper.classList.add('loaded')
 }
@@ -28,7 +28,14 @@ $('#mask').click(() => {
 });
 
 // メニューのリンクをクリックするとで閉じる
-$('#menu_list').click(() => {
+$('#menu_list1').click(() => {
+    $('.openbtn').toggleClass('menu_active');
+    $('.mask').toggleClass('mask_active');
+    $('.head_box').toggleClass('head_box_active');
+
+});
+// メニューのリンクをクリックするとで閉じる
+$('#menu_list2').click(() => {
     $('.openbtn').toggleClass('menu_active');
     $('.mask').toggleClass('mask_active');
     $('.head_box').toggleClass('head_box_active');
@@ -36,7 +43,7 @@ $('#menu_list').click(() => {
 });
 
 
-
+// ヘッダー
 var headerOffset = $('header').offset().top;
 
 $(window).scroll(function () {
@@ -59,32 +66,28 @@ $('#target').click(() => {
 
 
 // スライドショー
+
 $('.slider').slick({
-    arrows: true,//左右の矢印はなし
-    autoplay: true,//自動的に動き出すか。初期値はfalse。
-    autoplaySpeed: 0,//自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
-    speed: 3000,//スライドのスピード。初期値は300。
-    infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+    autoplay: true,//自動的に動き出すか。初期値はfalse。 OK
+    infinite: true,//スライドをループさせるかどうか。初期値はtrue。 OK
+    speed: 1500,//スライドのスピード。初期値は300。
+    slidesToShow: 4, //スライドを画面に3枚見せる
+    slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
     pauseOnHover: true,//オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
-    pauseOnFocus: true,//フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
+    pauseOnFocus: false,//フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
     cssEase: 'linear',//動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear
-    slidesToShow: 3,//スライドを画面に3枚見せる
-    slidesToScroll: 1,//1回のスライドで動かす要素数
-    centerMode: true, // centerModeを有効にする
-    responsive: [
-        // {
-        //     breakpoint: 769,//モニターの横幅が769px以下の見せ方
-        //     settings: {
-        //         slidesToShow: 2,//スライドを画面に2枚見せる
-        //     }
-        // }
-        // ,
-        {
-            breakpoint: 430,//モニターの横幅が430px以下の見せ方
-            settings: {
-                slidesToShow: 2,//スライドを画面に1.5枚見せる
-            }
+    prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+    nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+    centerMode: true,//要素を中央ぞろえにする
+    variableWidth: true,//幅の違う画像の高さを揃えて表示
+    dots: true,//下部ドットナビゲーションの表示
+    responsive: [{
+
+        breakpoint: 430,//モニターの横幅がpx以下の見せ方
+        settings: {
+            slidesToShow: 2,//スライドを画面に2枚見せる
+            arrows: false, //左右の矢印はなし
         }
+    }
     ]
 });
-
