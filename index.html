@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたかんとう水族館</title>
+    <!-- 更新範囲 -->
+    <!-- SEO対策 -->
+    <title>きたかんとう水族館[公式]｜トップページ</title>
+    <meta name="Description"
+        content="札幌で海の仲間達との楽しい思い出を、『きたかんとう水族館』。人気のイルカやトドなどのパフォーマンスやペンギンやリクガメのお散歩パレード情報などをご紹介しています。">
+    <meta name="Keywords" content="北海道,札幌,水族館,動物園,北関東水族館,家族,人気">
+    <meta name="application-name" content="きたかんとう水族館">
+    <!-- ここまでSEO -->
 
-
-    <!-- flickity-css -->
-    <link rel="stylesheet" href="./js/jquery/flickity-docs/docs/flickity.min.css">
+    <link rel="icon" href="/access/image/favicon.ico">
+    <!--  -->
     <!-- グーグルフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,187 +23,417 @@
     <link rel="stylesheet" type="text/css"
         href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css"> -->
     <!-- CSS -->
     <link rel="stylesheet" href="./style/style.css">
-
-    <!-- Vega2 -->
-    <link rel="stylesheet" href="./vegas/vegas.min.css">
-
+    <!-- jquery読み込み -->
+    <script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
 
 </head>
 
 <body>
-    <!-- Loading画面 -->
-    <div class="loading" id="loading">
-        <div class="squid">
-            <img src="./img/icon/icon (11).png" alt="">
-        </div>
-        <div class="loading_text">
-            <h2>LOADING..</h2>
-        </div>
-    </div>
-    <!-- mask -->
-    <div class="mask" id="mask"></div>
-    <section id="navigation">
-    </section>
-    <!-- ハンバーガーメニュー -->
-    <div class="openbtn" id="target">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- mainvisual -->
-    <div class="video_fish">
-        <video src="./mp4/mainvisual.mp4" muted="" autoplay="" loop=""></video>
-        <h2>ダミーテキスト</h2>
-    </div>
-
-    <!-- header -->
-
-    <header>
-        <div class="head_box">
-            <ul class="head_flex_box">
-                <li>
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (1).png" alt="">
-                            <p>水族館本館</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (2).png" alt="">
-                            <p>イルカプール</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (3).png" alt="">
-                            <p>ペンギン館</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (4).png" alt="">
-                            <p>海獣エリア</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (5).png" alt="">
-                            <p>リクガメ散歩</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-
-                    <a href="">
-                        <div class="head_box_list">
-                            <img src="./img/icon (6).png" alt="">
-                            <p>ふれあい広場</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <ul class="head_flex_box2">
-                <li><a href="./access/access.html">施設案内</a></li>
-                <li><a href="">エリアマップ</a></li>
-                <li><a href="">ご利用案内</a></li>
-                <li><a href="./access/access.html">アクセス</a></li>
-                <li><a href="">よくある質問</a></li>
-                <li><a href="">お問い合わせ</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <section class="topics">
-        <h2 class="topics_title"><span class="wave">トピックス</span></h2>
-    </section>
-
-    <section class="topics_slider">
-        <ul class="slider">
-            <li><a href=""><img src="./img/1.jpg" alt="test"></a></li>
-            <li><a href="#"><img src="./img/2.jpg" alt="test"></a></li>
-            <li><a href="#"><img src="./img/3.jpg" alt="test"></a></li>
-            <li><a href="#"><img src="./img/4.jpg" alt="test"></a></li>
-            <li><a href="#"><img src="./img/5.jpg" alt="test"></a></li>
-            <li><a href="#"><img src="./img/6.jpg" alt="test"></a></li>
-        </ul>
-    </section>
-    <!-- newsとinfomation横並び -->
-    <div class="flex_section">
-        <!-- news -->
-        <section class="news">
-            <h2 class="news_title">お知らせ</h2>
-
-            <ul>
-                <li><a href="">
-                        <div class="news_time">2023年10月27日</div>
-                        <div class="news_name">「深海生物マイスター 新種はどれだ！？」</div>
-                    </a></li>
-                <li><a href="">
-                        <div class="news_time">2023年10月11日</div>
-                        <div class="news_name">「深海生物マイスター 新種はどれだ！？」</div>
-                    </a></li>
-                <li><a href="">
-                        <div class="news_time">2023年10月9日</div>
-                        <div class="news_name">「深海生物マイスター 新種はどれだ！？」</div>
-                    </a></li>
-                <li><a href="">
-                        <div class="news_time">2023年9月29日</div>
-                        <div class="news_name">「深海生物マイスター 新種はどれだ！？」</div>
-                    </a></li>
-            </ul>
-            <div class="news_list">
-
-                <div class="news_list_box">
-                    <a href="">
-                        <h2>お知らせ 一覧</h2>
-                    </a>
+    <main>
+        <!-- Loading画面 -->
+        <div class="common">
+            <div class="loading" id="loading">
+                <div class="squid">
+                    <img src="../img/loading/02kurage.png" alt="">
                 </div>
-
+                <div class="loading_text">
+                    <h2>LOADING..</h2>
+                </div>
             </div>
-        </section>
-        <section class="infomation">
-            <h2 class="infomation_title">information</h2>
-            <div class="infomation_box">
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>水族館<br>の歩き方</a></div>
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>入園料金</a></div>
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>駐車場の<br>ごあんない</a></div>
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>授乳室の<br>ごあんない</a></div>
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>ベビーカー<br>貸出</a></div>
-                <div class="infomation_content"><a href=""><img src="./img/icon/java.png" alt=""
-                            style="height: 50px;"><br>車いす<br>貸出</a></div>
+            <!-- mask -->
+            <div class="mask" id="mask"></div>
 
-
+            <!-- ハンバーガーメニュー -->
+            <div class="openbtn" id="target">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-        </section>
-    </div>
-    <!-- newsとinfomation横並び終わり -->
-    <div class="span"></div>
-    <!--  -->
+            <!-- mainvisual -->
+            <div class="video_fish">
+                <video class="video_background" src="./mp4/mainvisualback.mp4" muted="" autoplay="" loop=""></video>
+                <video id="video" src="../mp4/mainvisual03.mp4" muted="" autoplay="" loop=""></video>
+            </div>
 
-    <footer>
-        <div>
-            <p>&copy;Copyright 2023 Kitakantou Aquarium.Co.LTD All rights reserved</p>
+            <!-- header -->
+
+            <header>
+                <div class="head_box">
+                    <ul class="head_flex_box" id="menu_list1">
+                        <li>
+                            <a href="./index.html">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/01suizokukan.png" alt="">
+                                    <p>水族館TOP</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#iruka">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/02iruka.png" alt="">
+                                    <p>イルカプール</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#penguin">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/03pengin.png" alt="">
+                                    <p>ペンギン館</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="./aria/aria.html#suisou">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/06sakana.png" alt="">
+                                    <p>すいそう館</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#kaijyu">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/04kaijyu.png" alt="">
+                                    <p>海獣エリア</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#rikugame">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/05kame.png" alt="">
+                                    <p>リクガメ散歩</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="head_flex_box2" id="menu_list2">
+                        <li><a href="./index.html#infomation">施設案内</a></li>
+                        <li><a href="./access/access.html#map">エリアマップ</a></li>
+                        <li><a href="./access/access.html#access1">アクセス</a></li>
+                        <li><a href="./contact/contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </header>
         </div>
-    </footer>
+        <!-- header終わり -->
 
+        <section class="topics">
+            <h2 class="topics_title"><span class="wave">トピックス</span></h2>
+        </section>
+
+        <section class="topics_slider">
+            <ul class="slider">
+                <li><a href="./aria/aria.html#iruka"><img src="./aria/images/イルカ.jpg" alt="いるか">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">イルカショー開催中</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#penguin"><img src="./aria/images/ペンギン01.jpg" alt="ペンギン">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">ペンギンのおさんぽ</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#suisou"><img src="./aria/images/クラゲ.JPG" alt="くらげ">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">美しい熱帯魚の世界</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#kaijyu"><img src="./aria/images/アザラシえさやり.jpg" alt="とど">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">海獣ショータイム</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#rikugame"><img src="./aria/images/リクガメ.jpg" alt="りくがめ">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">リクガメの<br>驚きの大きさを体験</p>
+                    </a></li>
+            </ul>
+        </section>
+        <!-- newsとinfomation横並び -->
+        <!-- <div class="flex_section"> -->
+
+        <div class="flex_section">
+            <!-- news -->
+            <section class="news">
+                <h2 class="news_title">お知らせ</h2>
+
+                <!-- </div> -->
+
+                <!-- やまがた ----お知らせ------>
+                <div class="news_list_box">
+                    <ul>
+                        <li><a href="">
+                                <div class="news_time">2024年4月20日</div>
+                                <div class="news_name">「G.W.期間中小中学生入館料無料」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#iruka">
+                                <div class="news_time">2023年11月11日</div>
+                                <div class="news_name">「イルカにさわってみよう！」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#penguin">
+                                <div class="news_time">2023年10月10日</div>
+                                <div class="news_name">「写真撮影 自由！」<br>ペンギン＆リクガメと♪</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#kaijyu">
+                                <div class="news_time">2023年9月9日</div>
+                                <div class="news_name">「迫力満点！トドのダイブ」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#kaijyu">
+                                <div class="news_time">2023年8月8日</div>
+                                <div class="news_name">「おねだりが可愛い♪」<br>アザラシえさやり体験</div>
+                            </a></li>
+                    </ul>
+                </div>
+                <!-- やまがた  ----お知らせ----ここまで -->
+            </section>
+            <!-- facility_services開始 -->
+            <div class="facility_services">
+                <section class="infomation" id="infomation">
+                    <h2 class="infomation_title">施設案内</h2>
+                    <div class="infomation_box">
+                        <div class="infomation_content"><a href="#information_facility"><img
+                                    src="./img/info-icon/01arukikata.png" alt=""
+                                    style="height: 50px;"><br>水族館<br>の歩き方</a>
+                        </div>
+                        <div class="infomation_content"><a href="#price_information"><img
+                                    src="./img/info-icon/02tiketto.png" alt="" style="height: 50px;"><br>入園料金</a></div>
+                        <div class="infomation_content"><a href="./access/access.html#access1"><img
+                                    src="./img/info-icon/03pa-king.png" alt=""
+                                    style="height: 50px;"><br>駐車場の<br>ごあんない</a></div>
+                        <div class="infomation_content"><a href="#nursing_room"><img
+                                    src="./img/info-icon/04jyunyuusitu.png" alt=""
+                                    style="height: 50px;"><br>授乳室の<br>ごあんない</a></div>
+                        <div class="infomation_content"><a href="#babyrental"><img src="./img/info-icon/05bebycar.png"
+                                    alt="" style="height: 50px;"><br>ベビーカー<br>貸出</a></div>
+                        <div class="infomation_content"><a href="#wheelchairrental"><img
+                                    src="./img/info-icon/06kurumaisu.png" alt="" style="height: 50px;"><br>車いす<br>貸出</a>
+                        </div>
+
+
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- newsとinfomation横並び終わり -->
+        <section class="information_facility" id="information_facility">
+            <h2 class="information_facility_title">水族館の歩き方</h2>
+            <!-- やまがた "水族館の歩き方"  -->
+
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">いきもの案内</h3>
+                        <div class="box">
+                            <p class="area_name">イルカ</p>
+                            <p>おねだりが可愛いイルカにえさをあげることができます。イルカショーも開催中！</p>
+                            <p class="area_name">ペンギン</p>
+                            <p>ペンギンたちが自由に泳ぎ回る様子を見たあとは、園内をおさんぽするペンギンと自由に写真を取れます♪</p>
+                            <p class="area_name">すいそう館</p>
+                            <p>ジンベイザメの大きな水槽・幻想的な世界のクラゲ水槽・世界中の小さなお魚たちの水槽が並んでいます。</p>
+                            <p class="area_name">海獣エリア</p>
+                            <p>迫力満点！トドのダイブや可愛いアザラシのえさやり体験ができます♪</p>
+                            <a href="./aria/aria.html">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">休憩スペース</h3>
+                        <div class="box">
+                            <p>各展示エリアの間には、ベンチやテーブルが設置された休憩エリアがあります。ここで一息ついたり、持ち込んだ飲食を楽しむことができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">レストラン</h3>
+                        <div class="box">
+                            <p>本館2階にはレストランがあります。ここでは、パークホテルの一流シェフによる季節の味覚料理を楽しむことができます。
+                                窓からは水族館の全景を眺めることができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ショップ</h3>
+                        <div class="box">
+                            <p>本館1階にはショップがあります。ここでは、オリジナルグッズや海洋生物に関する書籍などを購入することができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ご利用サービス</h3>
+                        <div class="box">
+                            <p>当館では、ベビーカーや車いすの貸し出し、授乳室、駐車場などのサービスを提供しております。詳細は各サービスの案内をご覧ください。</p>
+                            <a href="#nursing_room">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+
+            <!-- やまがた "水族館の歩き方" 以上 -->
+        </section>
+        <section class="price_information" id="price_information">
+            <!-- やまがた "入園料金" -->
+
+            <img src="./img/img_img/825_clownfish_kakurekumanomi_8894.jpg" class="kumanomi01">
+            <h2 class="price_information_title">入園料金</h2>
+
+
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">一般入場料</h3>
+                        <div class="box">
+                            <p>大人（18歳以上）：2,000円</p>
+                            <p>高校生：1,500円</p>
+                            <p>中学生・小学生：1,000円</p>
+                            <p>幼児（4歳以上）：500円</p>
+                            <p>3歳以下：無料</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">年間パスポート</h3>
+                        <div class="box">
+                            <p>大人：10,000円</p>
+                            <p>高校生：7,500円</p>
+                            <p>中学生・小学生：5,000円</p>
+                            <p>幼児：2,500円</p>
+                            <p>年間パスポートは購入日から1年間、
+                                何度でも入場可能です。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">グループ割引</h3>
+                        <div class="box">
+                            <p>15名以上の団体様は、
+                                各入場料から20%割引となります。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">障害者割引</h3>
+                        <div class="box">
+                            <p>障害者手帳をお持ちの方と、その介護者1名様は、
+                                各入場料から50%割引となります。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">その他</h3>
+                        <div class="box">
+                            <p>ペンギンの給餌体験：500円（事前予約が必要です）</p>
+                            <p>深海エリアガイドツアー：1,000円（事前予約が必要です）</p>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+            <img src="./img/img_img/picture (3).jpg" class="fish">
+            <!-- やまがた  ----入園料金----ここまで -->
+        </section>
+
+        <!-- 切り取り -->
+
+        <!-- 切り取り終わり -->
+        <section class="nursing_room" id="nursing_room">
+            <!-- やまがた "ご利用サービス" -->
+            <h2 class="nursing_room_title">ご利用サービス</h2>
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">授乳室</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>授乳室は、水族館の2階、トロピカルフィッシュエリアの隣に位置しています。案内看板をご参照いただき、
+                                迷われた場合はスタッフまでお問い合わせください。</p>
+                            <p class="area_name">設備</p>
+                            <p>授乳室には、プライバシーを保つための個室が3室、オムツ交換台、手洗い場、ベビーベッド、ベビーチェアを完備しております。
+                                また、電子レンジと給湯設備もご用意しておりますので、ミルクの調整にもご利用いただけます。</p>
+                            <p class="area_name">利用時間</p>
+                            <p>授乳室は水族館の開館時間内（9:00～18:00）いつでもご利用いただけます。</p>
+                            <p class="area_name">利用ルール</p>
+                            <p>授乳室は、乳幼児をお連れのお客様専用となっております。大人だけのご利用はご遠慮ください。また、飲食のための利用は禁止とさせていただいております。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>授乳室の設備に問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：nursingroom@aquarium.com
+                            </p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ベビーカー貸出</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>ベビーカーの貸し出しは、水族館の入口右手のインフォメーションカウンターで行っております</p>
+                            <p class="area_name">利用料金</p>
+                            <p>ベビーカーの貸し出しは無料です。ただし、数に限りがありますので、先着順とさせていただいております。</p>
+                            <p class="area_name">利用条件</p>
+                            <p>ベビーカーの貸し出しは、水族館の開館時間内（9:00～18:00）で行っております。返却は閉館時間の30分前までにお願いします。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>ベビーカーに問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：babyrental@aquarium.com</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">車いす貸出</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>車いすの貸し出しは、水族館の入口左手のインフォメーションカウンターで行っております。</p>
+                            <p class="area_name">利用料金</p>
+                            <p>車いすの貸し出しは無料です。ただし、数に限りがありますので、先着順とさせていただいております。</p>
+                            <p class="area_name">利用条件</p>
+                            <p>車いすの利用は、歩行が困難なお客様が対象となります。また、車いすの数には限りがありますので、ご了承ください。</p>
+                            <p class="area_name">貸出時間</p>
+                            <p>車いすの貸し出しは、水族館の開館時間内（9:00～18:00）で行っております。返却は閉館時間の30分前までにお願いします。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>車いすに問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：wheelchairrental@aquarium.com
+                            </p>
+                        </div>
+                    </section>
+                </li>
+
+            </ul>
+
+            <!-- やまがた  "ご利用サービス" ここまで-->
+        </section>
+        </div>
+        <!-- facility_services終わり -->
+        <footer>
+            <div>
+                <small>&copy;Copyright 2023 Kitakantou Aquarium.Co.<br>All rights reserved.</small>
+            </div>
+        </footer>
+    </main>
 
     <!-- ↓　JS読み込み -->
     <!-- jquery -->
@@ -205,9 +441,26 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/js/6-1-8.js"></script>
+    <!-- <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script> -->
     <!-- js -->
     <script src="./js/main.js"></script>
+
+    <!-- やまがた "水族館の歩き方"-->
+    <script>
+        // 該当の要素がクリックされた時に  $(".title").on("click  まで。
+        $(".title").on("click", (event) => {
+            // クリックした要素の次の要素を取得 => nextメソッド
+            let value = $(event.currentTarget).next();
+            console.log(value);
+            // 変数valueの次の要素(div)に対してslideToggleメソッドを命令することで
+            // 表示⇔非表示の切替を行う 便利！
+            value.slideToggle();
+            $(event.currentTarget).toggleClass("close");
+        })
+    </script>
+    <!-- やまがた "水族館の歩き方" ここまで -->
+
+
 
 </body>
 

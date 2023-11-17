@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* 共通パーツ */
 * {
     margin: 0;
@@ -10,10 +12,40 @@
     font-family: 'Yomogi', cursive;
 }
 
+/* ------------------------- ヘッダー共通パーツ ------------------------------ */
+/* 初期化のプロパティ */
+.common img {
+    box-shadow: none;
+}
+
+.common h2,
+.common p,
+.common a {
+    font-size: initial;
+}
+
+.common li {
+    font-weight: initial;
+    font-size: initial;
+}
+
+.common p {
+    font-weight: bold;
+}
+
+main h2,
+main p {
+    text-align: center;
+    padding: initial;
+}
+
+
+
+/*  */
 a {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: #004384;
 }
 
 /* 横スクロール禁止 */
@@ -23,22 +55,18 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 余白用 */
-.span {
-    height: 100vh;
-    background-color: rgb(243, 243, 243);
+/* リンクに飛ぶ際の画面表示位置 */
+html {
+    scroll-padding-top: 20vh;
 }
 
-section {
-    padding: 0 10%;
-}
 
 
 /* ローディング */
 .loading {
     width: 100%;
     height: 100vh;
-    transition: all 2s;
+    transition: all 1s;
     background-color: skyblue;
     position: fixed;
     top: 0;
@@ -72,7 +100,7 @@ section {
     /* background-color: #72B8FF; */
     border-radius: 50%;
     transform: translateX(-100px);
-    animation: rotation 2s linear infinite;
+    animation: rotation 1s linear infinite;
 }
 
 .squid img {
@@ -86,7 +114,7 @@ section {
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -147,9 +175,11 @@ section {
     max-height: 100px;
     width: 100%;
     height: 100%;
+    padding: 5px;
 }
 
 .head_box_list p {
+    color: #FFFFFF;
     font-size: 0.8rem;
     height: 20%;
 }
@@ -168,15 +198,16 @@ section {
     line-height: 2;
 }
 
-@media(min-width: 430px) {
+@media (min-width: 430px) {
 
     /* ここに430px以上の画面幅で適用したいスタイルを書く */
     /* ヘッダーメニュー */
     .head_box {
         height: auto;
-
         width: 100%;
-        background-image: radial-gradient(circle, #72B8FF, #ffffff 180%);
+        /* background-image: radial-gradient(circle, #72B8FF, #ffffff 180%); */
+        background-image: radial-gradient(circle, rgba(114, 184, 255, 0.95), rgba(255, 255, 255, 0.1) 180%);
+
         transform: translateX(0%);
         position: relative;
     }
@@ -192,12 +223,14 @@ section {
     /* ヘッダーコンテンツ１ */
     .head_flex_box {
         height: auto;
-        max-height: 100px;
         width: 80%;
         margin: 0 auto;
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        max-height: 130px;
+        height: 80%;
+
     }
 
     .head_flex_box li {
@@ -220,17 +253,18 @@ section {
         max-height: 100px;
         width: 50%;
         height: 80%;
+        padding: 4px;
     }
 
     .head_box_list p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         height: 20%;
     }
 
 
     /* ヘッダーコンテンツ２ */
     .head_flex_box2 {
-        background-image: radial-gradient(circle, #004384, #ffffff 180%);
+        background-image: radial-gradient(circle, rgba(0, 67, 132, 0.95), rgba(255, 255, 255, 0.1) 180%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -262,27 +296,37 @@ section {
 .video_fish {
     display: flex;
     justify-content: center;
-    height: 50%;
-    width: 100%;
-    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 40vh;
+
 }
 
 .video_fish video {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.video_fish h2 {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    rotate: 10deg;
-    color: white;
-
+    height: 100%;
 }
 
+
+@media (min-width: 430px) {
+    .video_fish {
+        height: 86vh;
+    }
+
+    .video_fish video {
+        position: absolute;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .video_background {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+    }
+}
 
 
 /* ------ハンバーガーメニュー------ */
@@ -373,42 +417,63 @@ section {
     z-index: 999;
 }
 
+@media (min-width: 430px) {
+    .mask_active {
+        display: none;
+    }
+
+}
+
+/* ------------------------- ヘッダー共通パーツ終わり ------------------------------ */
+
+main {
+    background-image: url(../access/image/background.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+}
+
 /* ------メニュー画面------ */
 
-nav h4 {
-    margin: 12px 0;
-    text-align: left;
-    width: fit-content;
-}
 
-nav {
-    position: fixed;
-    width: 35vw;
-    height: 100vh;
-    background-color: #72B8FF;
-    right: 0;
-    z-index: 99;
-    transform: translateX(100%);
-    transition: all 0.7s;
-}
-
-/*  */
-
-.topics {
-    margin: 30px 0;
+/* セクションタイトル中央寄せ */
+.topics,
+.news,
+.infomation,
+.information_facility,
+.price_information,
+.parking,
+.nursing_room,
+.babyrental,
+.wheelchairrental {
+    margin: auto;
+    width: 95%;
+    text-align: center;
 }
 
 .topics_title,
 .news_title,
-.infomation_title {
+.infomation_title,
+.information_facility_title,
+.price_information_title,
+.parking_title,
+.nursing_room_title,
+.babyrental_title,
+.wheelchairrental_title {
     display: inline-block;
     border-bottom: solid 1px;
     line-height: 2;
-    margin: 12px 0;
-    color: #72B8FF;
-    font-size: 1rem;
+    margin: 10vh auto;
+    color: #003366;
+    font-size: 1.5rem;
     text-align: center;
+    border-top: 2px solid #003366;
+    border-bottom: 2px solid #003366;
+    box-shadow: #fff 20px 20px 30px;
 }
+
+
 
 .news_list {
     display: flex;
@@ -417,7 +482,7 @@ nav {
 }
 
 .news_list_box {
-    background-color: #72B8FF;
+    background-color: #ffffff80;
     margin: 0;
     border: none;
 }
@@ -436,39 +501,144 @@ nav {
 
 
 
-/*==================================
+/*==================================================
 スライダーのためのcss
 ===================================*/
-.topics_slider {
-    padding: 0;
+.slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 93%;
+    margin: 0 auto;
 }
 
 .slider img {
-    /* margin-top: 100px; */
-    width: 100%;
-    /*スライダー内の画像を横幅100%に*/
-    height: auto;
-    animation: ease;
-    
+    /* position: relative; */
+    width: 72vw;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: 30vh;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
-.slider img:hover {
-    scale: 1.1;
+.slider_pick {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    rotate: -20deg;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #d5ff7267;
+}
 
+.slider_text {
+    position: absolute;
+    top: 72%;
+    left: 36%;
+    transform: translate(-50%, 0);
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #72f6ff67;
 }
 
 
 .slider .slick-slide {
-    margin: 0 -10px;
-    /* / スライド左右の余白調整 */
+    transform: scale(0.9);
+    /*左右の画像のサイズを80%に*/
+    transition: all .2s;
+    /*拡大や透過のアニメーションを0.5秒で行う */
+    opacity: 0.9;
+    /*透過50%*/
 }
 
-.slider {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.slider .slick-slide.slick-center {
+    transform: scale(1);
+    /*中央の画像のサイズだけ等倍に*/
+    opacity: 1;
+    /*透過なし*/
 }
 
+@media (min-width: 430px) {
+
+    /* PC画面の場合 */
+    .slider img {
+        width: 35vw;
+        height: 45vh;
+    }
+
+    .slider_pick {
+        font-size: 1.5rem;
+    }
+
+    .slider_text {
+        top: 82%;
+        font-size: 1.5rem;
+    }
+
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;
+    /*矢印の色*/
+    border-right: 2px solid #666;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+    /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #333;
+    /*ドットボタンの現在地表示の色*/
+}
+
+/* スライダーおわり */
+.infomation {}
 
 .infomation_box {
     display: flex;
@@ -476,8 +646,8 @@ nav {
 }
 
 .infomation_content {
+    border-radius: 10px;
     cursor: pointer;
-
     text-align: center;
     width: 50%;
     background-image: radial-gradient(circle, #004384, #ffffff 150%);
@@ -487,22 +657,431 @@ nav {
 .infomation_content:nth-child(4),
 .infomation_content:nth-child(5) {
     background-image: radial-gradient(circle, #72B8FF, #ffffff 150%);
+}
 
+.infomation_content a {
     color: white;
+    padding: 5px;
+
 }
 
 @media (min-width: 430px) {
 
     /* ここに430px以上の画面幅で適用したいスタイルを書く */
 
-    .flex_section {
+    /* .flex_section {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .news,
+    .infomation {
+        width: 50%;
+    }
+
+    .news_time,
+    .news_name {
+        font-weight: bold;
+        /* text-align: center; */
+        /* margin-left: 10%; */
     }
 }
 
+
+
+/* フッター */
 footer {
     background-color: #004384;
     color: white;
     text-align: center;
 }
+
+footer small {
+    color: white;
+}
+
 /*  --------------------------------------    */
+
+
+
+
+/*やまがた  ----お知らせ---- */
+
+* {
+    color: #004384;
+}
+
+.news_list_box {
+    width: 100%;
+    height: 30vh;
+    overflow-y: scroll;
+    border: 1px solid #004384;
+    padding: 10px;
+}
+
+.news_list_box ul li {
+    border-bottom: 1px dashed #8c9299;
+    padding: 5px;
+}
+
+
+@media(min-width:430px) {
+    .news_list_box {
+        width: 100%;
+        height: 30vh;
+        padding: 30px;
+    }
+
+    .news_list_box ul li {
+        height: 10vh;
+        border-bottom: 1px dashed #8c9299;
+        padding: 5px;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+/* やまがた  ----お知らせ----  ここまで */
+
+
+/*やまがた  ---- 水族館の歩き方---- （共通含）*/
+
+.accordion_area {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#price_information .accordion_area {
+    width: 100%;
+    max-width: none;
+}
+
+.accordion_area li {
+    margin: 10px 0;
+
+    /* 装飾用 */
+    position: relative;
+}
+
+/* 装飾用*/
+.accordion_area li::before {
+    content: "";
+    position: absolute;
+    background: rgba(239, 235, 235, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    z-index: 4;
+}
+
+.accordion_area li:nth-of-type(2)::before {
+    width: 20px;
+    height: 20px;
+}
+
+.accordion_area li:nth-of-type(3)::before {
+    width: 45px;
+    height: 45px;
+}
+
+.accordion_area li:nth-of-type(4)::before {
+    width: 20px;
+    height: 20px;
+    left: 42%;
+}
+
+.accordion_area li:nth-of-type(5)::before {
+    width: 30px;
+    height: 30px;
+    left: 42%;
+}
+
+.accordion_area section {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.title {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3% 3% 3% 30px;
+    transition: all .5s ease;
+
+    /* 装飾用 */
+    z-index: 5;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #004384;
+}
+
+.title::before {
+    top: 48%;
+    left: 28%;
+    transform: rotate(0deg);
+}
+
+.title::after {
+    top: 48%;
+    left: 28%;
+    transform: rotate(90deg);
+}
+
+
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+.box {
+    display: none;
+    background-color: #f3f3f3;
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+}
+
+/* キャプション内 くわしくはこちら */
+.box a {
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 10%;
+    background-color: rgba(114, 184, 255, 0.55);
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #004384;
+    border-radius: 50%;
+}
+
+.area_name {
+    width: fit-content;
+    border-left: 7px solid #72B8FF;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+@media(min-width:430px) {
+    .accordion_area li {
+        margin: 30px 0;
+        width: 70%;
+    }
+
+    .accordion_area li::before {
+        width: 100px;
+        height: 100px;
+        top: -12%;
+        left: 36%;
+    }
+
+    /*  */
+    .accordion_area li:nth-of-type(2)::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .accordion_area li:nth-of-type(3)::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    .accordion_area li:nth-of-type(4)::before {
+        width: 50px;
+        height: 50px;
+        left: 42%;
+    }
+
+    .accordion_area li:nth-of-type(5)::before {
+        width: 30px;
+        height: 30px;
+        left: 42%;
+    }
+
+    /*  */
+    .title::before {
+        left: 34%;
+    }
+
+    .title::after {
+        left: 34%;
+    }
+
+    .accordion_area li:nth-child(2),
+    .accordion_area li:nth-child(4) {
+        margin-left: 40%;
+    }
+
+    .box a {
+        padding: 20px;
+        margin-left: 50%;
+        margin-top: 20px;
+        border-bottom: 7px solid #004384;
+    }
+}
+
+/* やまがた  ----水族館の歩き方---- (共通含）  ここまで */
+
+/* やまがた  ----入園料金---- */
+#price_information ul li {
+    border: 1px solid #fff;
+}
+
+#price_information .title::before,
+#price_information .title::after {
+    /* display: none; */
+    left: 5%;
+
+
+}
+
+#price_information .accordion_area li::before {
+    display: none;
+
+}
+
+.kumanomi01,
+.fish {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media(min-width:430px) {
+
+    /*  */
+    .accordion_area:nth-of-type(2) {
+        width: 100%;
+    }
+
+    /*  */
+    .price_information {
+        position: relative;
+    }
+
+    .kumanomi01 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 80%;
+        left: 20%;
+    }
+
+    /*  !!  */
+    #price_information .accordion_area {
+        max-width: none;
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        /* margin: 0; */
+    }
+
+    #price_information .accordion_area li {
+        width: 20vw;
+        height: 25vh;
+        margin: 0;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255, 0.5);
+        /* border: 5px solid #72B8FF; */
+    }
+
+    #price_information .accordion_area li:nth-child(2),
+    #price_information .accordion_area li:nth-child(4) {
+        margin-top: 20vh;
+    }
+
+    #price_information .title {
+        margin: 10vh 0;
+    }
+
+    /*  !!  ここまで*/
+    #price_information .accordion_area section {
+        border-bottom: none;
+    }
+
+    #price_information img {
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #price_information .kumanomi {
+        width: 15vw;
+        height: 25vh;
+        margin-left: 80%;
+    }
+
+    #price_information .fish {
+        width: 10vw;
+        height: 20vh;
+        margin-left: 15%;
+        margin-top: 1%;
+    }
+    #price_information .box {
+        border-radius: 50%;
+    }
+    
+}
+
+/* やまがた  ----入園案内---- ここまで */
+
+/* やまがた ----ご利用サービス---- */
+#nursing_room .accordion_area section {
+    border: 1px solid #f3f3f3;
+    /* border-radius: 50%; */
+    background-color: rgba(243, 243, 243, 0.4);
+}
+
+#nursing_room .accordion_area li::before {
+    display: none;
+}
+
+#nursing_room .title {
+    padding: 3% 3% 3% 50px;
+}
+
+@media(min-width:430px) {
+    #nursing_room .accordion_area li {
+        max-width: none;
+        width: 100%;
+    }
+
+    #nursing_room .accordion_area {
+        /* display: flex; */
+
+        width: 100%;
+        
+    }
+
+    #nursing_room .accordion_area li:nth-child(2),
+    #nursing_room .accordion_area li:nth-child(4) {
+        margin-left: 0%;
+    }
+
+    #nursing_room .accordion_area section {
+        width: 80%;
+        /* height: 40vh; */
+        /* border: 2px solid #fff; */
+    }
+
+    #nursing_room .box {
+        width: 250px;
+    }
+
+    #nursing_room .title {
+        padding: 3% 3% 3% 25px;
+        /* margin: 50% 0 0 8%; */
+    }
+}

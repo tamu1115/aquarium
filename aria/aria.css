@@ -1,0 +1,534 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Yomogi', cursive;
+}
+
+/* 共通パーツ */
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Yomogi', cursive;
+}
+
+section {
+    padding: 0% 10%;
+}
+
+main {
+    background-image: url(./images/background.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+}
+
+section h1 {
+    width: 50%;
+    margin: 10vh auto;
+    text-align: center;
+    color: #003366;
+    font-weight: bold;
+    border-top: 2px solid #003366;
+    border-bottom: 2px solid #003366;
+    box-shadow: #fff 20px 20px 30px;
+}
+
+
+img {
+    box-shadow: 5px 5px 5px 5px #fff;
+}
+
+/* 体験 figcaption */
+.figcaption {
+    height: 30px;
+    width: 25vw;
+    text-align: center;
+    background: #003366;
+    color: #fff;
+    transform: rotate(-15deg);
+    margin-left: -15%;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* イルカ */
+.iruka .img02 {
+    width: 50vw;
+    height: auto;
+    margin: 0 20%;
+    border-radius: 330px 143px 149px 121px / 148px 122px 96px 123px;
+}
+
+.iruka .img01 {
+    width: 50vw;
+    height: 20vh;
+    object-fit: cover;
+    object-position: 0 2px;
+    margin-left: 30%;
+    border-radius: 145px 58px 72px 84px / 97px 49px 44px 65px;
+    box-shadow: 5px 5px 5px 5px #d8d6d6;
+
+}
+
+.textbox {
+    width: 100%;
+    margin: 7vh auto;
+    color: #004384;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* opacity: 0.8; */
+}
+
+.textbox h3 {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(transparent 50%, #72B8FF 70%);
+}
+
+.textbox h4 {
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 2px solid #72B8FF;
+}
+
+.textbox p {
+    padding: 3px 0;
+
+}
+
+.textbox ul li {
+    list-style-type: none;
+}
+
+/* イルカ ----ここまで---- */
+
+/* ペンギン */
+.penguin .img_box {
+    display: flex;
+    justify-content: center;
+}
+
+.penguin .img_box img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    object-position: 0px -30vh;
+    margin: 0 auto;
+    border-radius: 232px 400px 73px 146px / 150px 150px 51px 81px;
+}
+
+/* ペンギン ----ここまで---- */
+
+/* すいそう館 */
+.textbox {
+    padding: 5%;
+}
+
+.suisou .textbox h3 {
+    margin: 2vh auto 0;
+}
+
+.suisou img {
+    box-shadow: 5px 5px 5px 5px #d8d6d6;
+
+}
+
+.suisou .img_box {
+    margin-bottom: 8vh;
+}
+
+.img_jinbei img {
+    width: 60vw;
+    height: 26vh;
+    object-fit: cover;
+    border-radius: 102px 50px 102px 50px / 76px 25px 72px 25px;
+}
+
+.img_kurage img {
+    width: 60vw;
+    height: auto;
+    object-fit: contain;
+    border-radius: 181px 382px 102px 76px / 148px 150px 72px 58px;
+}
+
+.img_little01,
+.img_little02 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.img_little01 .kumanomi {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 126px 100px 262px 76px / 82px 86px 146px 58px;
+}
+
+.img_little01 .hagi {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 66px 52px 108px 174px / 48px 28px 95px 115px;
+    margin: 2vh 5vw 0 0;
+}
+
+.img_little02 .adeyakko {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 168px 52px 82px 147px / 108px 28px 72px 49px;
+}
+
+.img_little02 .tinanago {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 85px 136px 111px 116px / 59px 109px 84px 98px;
+}
+
+.suisou .text .aquarium {
+    width: 80%;
+    height: 20vh;
+    object-fit: cover;
+    margin-top: 5vh;
+    border-radius: 20%;
+}
+
+/* すいそう館 ----ここまで---- */
+
+/* 海獣エリア */
+.kaijyu img {
+    box-shadow: 5px 5px 5px 5px #d8d6d6;
+
+}
+
+.img_box .todo {
+    width: 70%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 292px 83px 164px 60px / 150px 43px 93px 46px;
+    margin: 2vh;
+}
+
+.todo_dive {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10%;
+}
+
+.img_box .azarasi {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 149px 238px 164px 60px / 96px 150px 93px 46px;
+    margin: 2vh;
+}
+
+.box_azarasi_02 .azarasi_esayari {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 149px 238px 264px 60px / 96px 150px 127px 46px;
+}
+
+.note {
+    font-size: 14px;
+    margin-bottom: 5vh;
+}
+
+/* 海獣エリア ----ここまで---- */
+
+/* リクガメ */
+.rikugame img {
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    object-fit: contain;
+    border-radius: 68px 147px 50px 60px / 59px 134px 39px 46px;
+}
+
+
+/* pc screen */
+@media (min-width:430px) {
+    nav {
+        height: 20vh;
+    }
+
+    .mainvisual {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .mainvisual h1 {
+        width: auto;
+        font-size: 6vw;
+    }
+
+    h1 {
+        width: 60%;
+        font-size: 4vw;
+    }
+
+    .textbox h3 {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 2vw;
+        background: linear-gradient(transparent 50%, #72B8FF 70%);
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    li {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+
+    /* 体験 figcaption */
+    .figcaption {
+        height: 15vh;
+        width: 20vw;
+        font-size: 4vw;
+        /* margin-top: 0vh; */
+        margin-left: 3%;
+        padding-top: 7px;
+    }
+
+    /* イルカ */
+    .iruka .img01 {
+        width: 30vw;
+        height: 40vh;
+        object-fit: cover;
+        margin-top: 10vh;
+        margin-left: 2vw;
+    }
+
+    .iruka .img02 {
+        width: 30vw;
+        margin: 0 30%;
+    }
+
+    .pc-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pc-container .pc-textbox {
+        width: 30vw;
+        margin: 5vh 0;
+    }
+
+    .pc-container .pc-textbox ul {
+        margin: 2vh auto;
+    }
+
+    .pc_fontbox {
+        width: 50%;
+        margin: 2vh auto;
+    }
+
+    .textbox h4 {
+        width: 45%;
+    }
+
+    /* ペンギン */
+    .penguin .img_box img {
+        width: 60%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: 0px -80vh;
+        margin: 0 auto;
+        border-radius: 232px 400px 73px 146px / 150px 150px 51px 81px;
+    }
+
+    .penguin p {
+        width: 50%;
+        margin: 2vh auto;
+    }
+
+    .penguin h4 {
+        width: 20%;
+        margin: 2vh auto;
+    }
+
+    /* すいそう館 */
+    .suisou .img_box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .suisou .img_box:nth-child(2),
+    .suisou .img_box:nth-child(3) {
+        padding-top: 10vh;
+        border-top: 2px dashed #d8d6d6;
+    }
+
+    .suisou .img_box img,
+    .suisou .img_box .text,
+    .suisou .img_box .images {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .suisou .img_box .text {
+        padding-top: 5vh;
+    }
+
+    .suisou .img_box .text p {
+        width: 60%;
+        margin: 3vh auto;
+    }
+
+    .img_kurage {
+        flex-direction: row-reverse;
+    }
+
+    .suisou .img_box img {
+        box-shadow: 5px 5px 5px 5px #d8d6d6;
+    }
+
+    .suisou .textbox h3 {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 2vw;
+        background: linear-gradient(transparent 50%, #72B8FF 70%);
+    }
+
+    .img_jinbei img {
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .suisou .textbox .aquarium {
+        height: 35vh;
+        object-fit: cover;
+        border-radius: 20%;
+    }
+
+    /* 海獣エリア */
+    .kaijyu .img_box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .kaijyu .img_box:nth-child(2) {
+        flex-direction: row-reverse;
+        border-bottom: 2px dashed #d8d6d6;
+        padding-bottom: 10vh;
+
+    }
+
+    .kaijyu .img_box .todo {
+        width: 30%;
+        height: 45vh;
+    }
+
+    .kaijyu .img_box .box_todo {
+        width: 30%;
+        padding-top: 7vh;
+    }
+
+    .kaijyu .img_box .todo_dive {
+        width: 60%;
+        height: 40vh;
+        object-fit: cover;
+    }
+
+    .note {
+        font-size: 16px;
+    }
+
+    .kaijyu .img_box .text {
+        width: 40%;
+        padding-top: 7vh;
+        padding-left: 4vw;
+    }
+
+    .kaijyu .img_box .text h4 {
+        width: 80%;
+    }
+
+    .kaijyu .img_box img {
+        box-shadow: 5px 5px 5px 5px #d8d6d6;
+    }
+
+    .img_box .azarasi {
+        width: 40%;
+    }
+
+    .kaijyu .img_box h3 {
+        width: 35%;
+        height: 7vh;
+        margin-top: 5vh;
+    }
+
+    .box_azarasi_01 {
+        margin: 5vh 15vw 0 15vw;
+
+    }
+
+    .kaijyu .box_azarasi_01 h3 {
+        margin-top: 15vh;
+    }
+
+    .box_azarasi_02 p {
+        width: 40%;
+        padding-top: 7vh;
+        padding-left: 4vw;
+        padding-right: 3vw;
+    }
+
+    .box_azarasi_02 .azarasi_esayari {
+        width: 50%;
+        height: 40vh;
+        object-fit: cover;
+        border-radius: 10%;
+        margin-top: -10vh;
+    }
+
+    .box_azarasi_02_p {
+        width: 45%;
+        margin-top: -5%;
+    }
+
+    /* リクガメ */
+    .rikugame .img_box img {
+        width: 30%;
+        margin-left: 35%;
+        /* margin: 0 auto; */
+    }
+
+    .rikugame .textbox h3,
+    .rikugame .textbox p {
+        width: 50%;
+        margin: 2vh auto;
+    }
+
+
+
+
+
+
+
+
+}
+/* フッター */

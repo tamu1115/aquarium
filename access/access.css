@@ -1,39 +1,16 @@
-/* font-family: 'M PLUS 1p', sans-serif;
-font-family: 'Noto Sans JP', sans-serif;
-font-family: 'Noto Serif JP', serif;
-font-family: 'Sawarabi Mincho', serif;
-font-family: 'Tsukimi Rounded', sans-serif;
-font-family: 'Yomogi', cursive; */
+@charset "utf-8";
 
-/* 共通 */
-
+/* 共通パーツ */
 * {
     margin: 0;
     padding: 0;
+    vertical-align: bottom;
     box-sizing: border-box;
+    list-style-type: none;
     font-family: 'Noto Sans JP', sans-serif;
-    font-family: 'Noto Serif JP', serif;
+    /* font-family: 'Noto Serif JP', serif; */
     font-family: 'Yomogi', cursive;
-    list-style: none;
 }
-
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a li,
-th,
-td,
-dd {
-    font-family: 'Yomogi', cursive;
-    font-size: 3rem;
-}
-
 
 
 h2 {
@@ -42,22 +19,15 @@ h2 {
 
 
 
-nav {
-    width: 100%;
-    height: 15vh;
-    background-color: #004384;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding-left: 5vw;
-    font-size: 2vw;
+th,
+td,
+dd {
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    vertical-align: middle;
+    line-height: 2rem;
 }
 
-nav h1 {
-    border-right: #fff 1px solid;
-    padding-right: 2vw;
-    font-size: 5vw;
-}
 
 .mainvisual {
     width: 100%;
@@ -70,21 +40,34 @@ nav h1 {
     align-items: center;
 }
 
-section h1 {
-    color: #fff;
+main {
+    background-image: url(./image/background.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    /* background: #004384; */
+    /* transform: translatey(20px); */
+    padding: 20px 0;
 }
 
-main {
-    /* background-image: url(./images/background.png);
-        background-repeat: repeat;
-        background-attachment: fixed; */
-    /* background-position: 0 0; */
-    background-color: #72B8FF;
+
+
+/* 背景 */
+.background {
+    position: fixed;
 }
+
+
+
+
+/* main {
+     background-color: rgba(255,255,255,0.8); 
+} */
 
 section {
     margin: 0px auto;
-    padding: 30px 10%;
+    /* padding: 30px 10%; */
 }
 
 section h1 {
@@ -107,6 +90,10 @@ section h1 {
 }
 
 
+
+/* ------------------------- ここからメインコンテンツ ------------------------------ */
+
+
 /* マップ */
 #map {
     width: 100%;
@@ -115,18 +102,23 @@ section h1 {
 
 }
 
-
 .map_img {
     width: 100%;
     height: auto;
+    padding: 0;
+
 }
 
 
 /* ガイダンス */
 
 #guidance {
-    background-color: #fff;
-    width: 100%;
+    margin: 20px;
+    border-radius: 5%;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 20px 20px 40px 20px;
+    transform: translateY(20px);
 }
 
 
@@ -135,19 +127,21 @@ section h1 {
     width: 100%;
     padding: 0;
     margin: 0;
-
+    text-align: center;
 }
 
-.access1_logo{
-    width: 50%;
+.access1_content p,
+.acc-box p {
+    font-size: 1rem;
+}
+
+.access1_logo {
+    width: 100%;
     left: -20px;
 }
 
 .access_map {
-    padding-bottom: 20px;
-    width: 100%;
-    height: 40vh;
-
+    max-width: 1200px;
 }
 
 .access1_content {
@@ -157,59 +151,260 @@ section h1 {
 
 /* アクセス2 */
 
+#access2 {
+    margin: 20px;
+    border-radius: 5%;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
 
-.dummy_footer {
-    width: 100%;
-    clip-path: inset(50% 0 0 0);
+.access-box {
+    display: flex;
+    justify-content: center;
 }
 
 .access-tb {
+    width: 90%;
+    text-align: center;
+
+}
+
+tbody {
+    width: 100%;
+}
+
+.pass {
     width: 70%;
-    text-align: center;
-
-}
-
-
-th,
-td,
-dd {
-    font-size: 2rem;
-    border: 2px solid #000;
 }
 
 
 
+/* ------------------------- メインコンテンツ終わり ------------------------------ */
 
-footer {
 
-    background-color: #004384;
-    color: white;
-    text-align: center;
+
+
+@media screen and (min-width:1024px) {
+    /*画面サイズが1024pxからはここを読み込む*/
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a li,
+    th,
+    td,
+    dd {
+        font-family: 'Yomogi', cursive;
+        font-size: 1.5rem;
+    }
+
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    th,
+    td {
+        font-size: 1rem;
+        letter-spacing: 1rem;
+    }
+
+
+
+    /* 背景 */
+    .background {
+        position: fixed;
+    }
+
+
+
+
+
+    main {
+        /* background-image: url(./images/background.png);
+        background-repeat: repeat;
+        background-attachment: fixed; */
+        /* background-position: 0 0; */
+        background-color: #72B8FF;
+    }
+
+    section {
+        margin: 0px auto;
+        padding: 30px 10%;
+    }
+
+    section h1 {
+        width: 40%;
+        margin: 12vh auto;
+        text-align: center;
+        font-size: 8vw;
+        /* color: #fff;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff; */
+
+    }
+
+
+
+    #header-top-i {
+        background: url(../image/GB.jpg);
+        width: 100%;
+        height: 30vh;
+    }
+
+
+    /* マップ */
+
+
+    #map {
+        padding: 20px 0;
+    }
+
+
+
+    .map_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .map_img {
+        width: 50%;
+        height: auto;
+    }
+
+
+    /* ガイダンス */
+
+    #guidance {
+        margin: 100px;
+    }
+
+
+    /* アクセス1 */
+    #access1 {
+        width: 100%;
+    }
+
+    .access1_logo {
+        width: 50%;
+        left: -20px;
+    }
+
+
+    .access1_content {
+
+        padding: 30px 10%;
+    }
+
+
+    .access1_content p,
+    .acc-box p {
+        font-size: 1.5rem;
+    }
+
+    /* アクセス2 */
+
+    #access2 {
+        margin: 100px;
+    }
+
+    .access-tb {
+        width: 70%;
+    }
+
+    tbody {
+        width: 70%;
+    }
+
+
+    th,
+    td,
+    dd {
+        font-size: 1.2rem;
+        border: 2px solid #000;
+        vertical-align: middle;
+        line-height: 2.5rem;
+    }
+
 }
 
+.rule li {
+    margin: 1rem 0;
+}
 
-
-/* レスポンシブ対応 */
-
-
-@media(min-width: 430px) {
-
-
-    
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a li,
-th,
-td,
-dd {
-    font-family: 'Yomogi', cursive;
+.rule li p,
+.rule li h4 {
     font-size: 1rem;
 }
 
-
+.parking {
+    width: 90%;
 }
+
+.parking h4 {
+    font-size: 1.2rem;
+}
+
+.parking ul li {
+    margin: 1rem 0;
+}
+
+
+@media(min-width:430px) {
+
+    /* PCサイズ */
+    .rule li p,
+    .rule li h4 {
+        font-size: 0.8rem;
+    }
+
+    .parking {
+        width: 60%;
+    }
+
+    .parking h4 {
+        font-size: 1.2rem;
+    }
+
+    .parking ul li {
+        margin: 1rem 0;
+    }
+}
+
+/* h3,
+p {
+    font-size: 1rem;
+    margin: 1rem;
+} */
+
+.guidance_list {
+    padding: 2rem 0;
+}
+
+/* @media(min-width:430px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a li,
+    th,
+    td,
+    dd {
+        font-family: 'Yomogi', cursive;
+        font-size: 1.5rem;
+    }
+
+    .head_box_list p{
+        font-size: 0.8rem;
+    }
+} */

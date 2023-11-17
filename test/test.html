@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Yomogi&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+
+<body>
+    <!-- Loading画面 -->
+    <div class="loading" id="loading">
+        <div class="squid">
+            <img src="../img/loading/02kurage.png" alt="">
+        </div>
+        <div class="loading_text">
+            <h2>LOADING..</h2>
+        </div>
+    </div>
+    <!-- mask -->
+    <div class="mask" id="mask"></div>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="openbtn" id="target">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- mainvisual -->
+    <div class="video_fish">
+        <video id="video" src="../mp4/mainvisual.mp4" muted="" autoplay="" loop=""></video>
+        <!-- <h2>ダミーテキスト</h2> -->
+    </div>
+
+    <!-- header -->
+
+    <header>
+        <div class="head_box">
+            <ul class="head_flex_box">
+                <li>
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/01suizokukan.png" alt="">
+                            <p>水族館本館</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/02iruka.png" alt="">
+                            <p>イルカプール</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/03pengin.png" alt="">
+                            <p>ペンギン館</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/04kaijyu.png" alt="">
+                            <p>海獣エリア</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/05kame.png" alt="">
+                            <p>リクガメ散歩</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+
+                    <a href="">
+                        <div class="head_box_list">
+                            <img src="../img/header-icon/06sakana.png" alt="">
+                            <p>ふれあい広場</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="head_flex_box2">
+                <li><a href="">施設案内</a></li>
+                <li><a href="">エリアマップ</a></li>
+                <li><a href="">ご利用案内</a></li>
+                <li><a href="">アクセス</a></li>
+                <li><a href="">よくある質問</a></li>
+                <li><a href="">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </header>
+        <!-- header終わり -->
+
+    <!-- ↓ JS読み込み -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
